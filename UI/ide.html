@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <div class="header">My Online Code Editor</div>
+    <div class="control-panel">
+      Select language: &nbsp; &nbsp;
+      <select id="languages" class="languages" onchange="changeLanguage()">
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="php">PHP</option>
+        <!-- <option value="java">Java</option> -->
+        <option value="py">Python</option>
+        <option value="node">Node</option>
+      </select>
+    </div>
+    <div class="container">
+      <div class="sub-editor">
+        <div class="editor" id="editor"></div>
+        <div class="button-container">
+          <button class="btn" onclick="executeCode()">Run</button>
+        </div>
+      </div>
+      <div class="output"></div>
+    </div>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"
+      integrity="sha384-L+YDE5thH7gGJ8XKnjo3rdk1N/8ObTQVBo/V2oGpAyYfSR0rNi7oDkpm04cr/kWh"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="JS/lib/ace.js"></script>
+    <script src="JS/lib/theme-monokai.js"></script>
+    <script src="JS/ide.js"></script>
+  </body>
+</html>
